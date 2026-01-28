@@ -17,3 +17,5 @@ RoxygenNote: 7.3.2
 Imports: 
     future.apply,
     Synth
+URL: https://github.com/mharmening/panelSCM
+BugReports: https://github.com/mharmening/panelSCM/issues
