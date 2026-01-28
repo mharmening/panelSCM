@@ -2,11 +2,13 @@
 % Please edit documentation in R/panelSCM-package.R
 \docType{package}
 \name{panelSCM-package}
-\alias{panelSCM}
 \alias{panelSCM-package}
-\title{panelSCM: A Synthetic Control Approach to Estimate Heterogeneous Treatment Effects with Panel Data}
+\alias{panelSCM}
+\title{panelSCM: Synthetic Control with Heterogeneous Treatment Effects}
 \description{
-Implements a panel-data extension of the Synthetic Control Method to estimate heterogeneous treatment effects. The approach constructs unit-specific synthetic controls, aligns individual treatment effects on a relative time scale, and estimates heterogeneous average treatment effects using kernel density estimation and highest density regions. The methodology is described in Baumert and Harmening (forthcoming).
+Implements a panel-data extension of the Synthetic Control Method to estimate
+heterogeneous treatment effects. The methodology is described in Baumert and
+Harmening (forthcoming).
 }
 \seealso{
 Useful links:
