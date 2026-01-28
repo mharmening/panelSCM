@@ -1,21 +1,27 @@
 Package: panelSCM
-Title: What the Package Does (One Line, Title Case)
+Title: A Synthetic Control Approach to Estimate Heterogeneous Treatment Effects with Panel Data
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: Implements a panel-data extension of the Synthetic Control
-    Method to estimate heterogeneous treatment effects. The approach
-    constructs unit-specific synthetic controls, aligns individual
-    treatment effects on a relative time scale, and estimates
-    heterogeneous average treatment effects using kernel density
-    estimation and highest density regions. The methodology is described
-    in Baumert and Harmening (forthcoming).
+Authors@R:
+    c(
+      person("Jona-Frederik", "Baumert", role = "aut"),
+      person("Morten", "Harmening", role = c("aut", "cre"),
+             email = "m.harmening@ipw.uni-hannover.de")
+    )
+Description: Implements a panel-data extension of the Synthetic Control Method
+    to estimate heterogeneous treatment effects. The approach constructs
+    unit-specific synthetic controls, aligns individual treatment effects on a
+    relative time scale, and estimates heterogeneous average treatment effects
+    using kernel density estimation and highest density regions. The methodology
+    is described in Baumert and Harmening (forthcoming).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Imports: 
+Imports:
     future.apply,
-    Synth
+    Synth,
+    ggplot2,
+    dplyr,
+    tidyr
 URL: https://github.com/mharmening/panelSCM
 BugReports: https://github.com/mharmening/panelSCM/issues

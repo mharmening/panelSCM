@@ -4,12 +4,25 @@
 \name{panelSCM-package}
 \alias{panelSCM}
 \alias{panelSCM-package}
-\title{panelSCM: What the Package Does (One Line, Title Case)}
+\title{panelSCM: A Synthetic Control Approach to Estimate Heterogeneous Treatment Effects with Panel Data}
 \description{
 Implements a panel-data extension of the Synthetic Control Method to estimate heterogeneous treatment effects. The approach constructs unit-specific synthetic controls, aligns individual treatment effects on a relative time scale, and estimates heterogeneous average treatment effects using kernel density estimation and highest density regions. The methodology is described in Baumert and Harmening (forthcoming).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/mharmening/panelSCM}
+  \item Report bugs at \url{https://github.com/mharmening/panelSCM/issues}
+}
+
+}
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com}
+\strong{Maintainer}: Morten Harmening \email{m.harmening@ipw.uni-hannover.de}
+
+Authors:
+\itemize{
+  \item Jona-Frederik Baumert
+}
 
 }
 \keyword{internal}
