@@ -21,11 +21,11 @@ prep_scm_panel(
 
 \item{outcome_var}{Name of the outcome variable.}
 
-\item{predictor_vars}{Character vector of predictor variable names.}
+\item{predictor_vars}{Character vector of predictor variable names. The predictors have to be numeric.}
 
-\item{id_var}{Name of the unit identifier.}
+\item{id_var}{Name of the unit identifier. The Variable has to be numeric.}
 
-\item{name_var}{Name of the unit name variable.}
+\item{name_var}{Name of the unit name variable. This variable has to be of mode character.}
 
 \item{time_var}{Name of the time variable.}
 
