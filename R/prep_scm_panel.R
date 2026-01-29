@@ -17,6 +17,47 @@
 #' @return A list containing fitted synthetic control models, data objects,
 #' diagnostic fit measures, and treatment timing information.
 #'
+#' @examples
+#' \donttest{
+#' # Example with simulated panel data
+#' set.seed(123)
+#' n_units <- 20
+#' n_time <- 15
+#'
+#' # Create a simple panel dataset
+#' df <- data.frame(
+#'   unit_id = rep(1:n_units, each = n_time),
+#'   unit_name = rep(paste0("Unit_", 1:n_units), each = n_time),
+#'   time = rep(1:n_time, n_units),
+#'   outcome = rnorm(n_units * n_time, mean = 10, sd = 2),
+#'   predictor1 = rnorm(n_units * n_time, mean = 5, sd = 1),
+#'   predictor2 = rnorm(n_units * n_time, mean = 3, sd = 0.5),
+#'   treatment = 0
+#' )
+#'
+#' # Assign treatment to units 1-5 starting at time 10
+#' df$treatment[df$unit_id <= 5 & df$time >= 10] <- 1
+#'
+#' # Add treatment effect
+#' df$outcome[df$treatment == 1] <- df$outcome[df$treatment == 1] + 3
+#'
+#' # Fit SCM models (using small donor range for speed)
+#' scm_results <- prep_scm_panel(
+#'   df = df,
+#'   outcome_var = "outcome",
+#'   predictor_vars = c("predictor1", "predictor2"),
+#'   id_var = "unit_id",
+#'   name_var = "unit_name",
+#'   time_var = "time",
+#'   treatment_indicator = "treatment",
+#'   donor_range = 3:4,
+#'   parallel = FALSE
+#' )
+#'
+#' # View results
+#' print(paste("Optimal donor pool size:", scm_results$optimal_n))
+#' }
+#'
 #' @export
 
 

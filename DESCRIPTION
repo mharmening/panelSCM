@@ -25,3 +25,6 @@ Imports:
     tidyr
 URL: https://github.com/mharmening/panelSCM
 BugReports: https://github.com/mharmening/panelSCM/issues
+Language: en-US
+Suggests:
+    testthat (>= 3.0.0)
