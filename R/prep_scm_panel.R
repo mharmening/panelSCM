@@ -6,9 +6,9 @@
 #'
 #' @param df A data frame containing panel data.
 #' @param outcome_var Name of the outcome variable.
-#' @param predictor_vars Character vector of predictor variable names.
-#' @param id_var Name of the unit identifier.
-#' @param name_var Name of the unit name variable.
+#' @param predictor_vars Character vector of predictor variable names. The predictors have to be numeric.
+#' @param id_var Name of the unit identifier. The Variable has to be numeric.
+#' @param name_var Name of the unit name variable. This variable has to be of mode character.
 #' @param time_var Name of the time variable.
 #' @param treatment_indicator Name of the treatment indicator (binary).
 #' @param donor_range Integer vector of donor pool sizes to evaluate.
@@ -34,8 +34,10 @@ prep_scm_panel <- function(df,
                            parallel = TRUE) {
 
 
-  # --- 0. COERCE UNIT ID TO CHARACTER ---
-  df[[id_var]] <- as.character(df[[id_var]])
+  # --- 0. COERCE UNIT ID TO NUMERIC AND NAME TO CHARACTER ---
+  df[[id_var]] <- as.numeric(df[[id_var]])
+  df[[name_var]] <- as.character(df[[name_var]])
+
 
   # --- 1. INITIAL IDENTIFICATION ---
   treated_unit_ids <- unique(df[[id_var]][df[[treatment_indicator]] == 1])
